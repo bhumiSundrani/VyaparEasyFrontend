@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { authMiddleware } from './app/middlewares/auth'
 import { allowIfAuthenticatedMiddleware } from './app/middlewares/allowIfAuthenticated'
 
-export async function  middleware(request: NextRequest) {
+export async function  proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
     if(pathname.startsWith('/verify-user')){
